@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { AddCategory } from "./AddCategory";
-import { GiftGrid } from "./GiftGrid";
+import  GiftGrid  from "./GiftGrid";
 
-const defaultValue = ['Pitbull', 'Schnauzer'] 
+const defaultValue = ['Hola'] 
 
 export const ComponentApp = () => {
 const [categories, setCategories] = useState (defaultValue);
@@ -18,7 +18,7 @@ const addCategory = (cualquiera) =>{
 
     return(
         <>
-            <h1>Lista de razas de perros</h1>
+            <h1>Gifs</h1>
             <AddCategory onAddCategory={addCategory}/>
             <ol>
                  {
