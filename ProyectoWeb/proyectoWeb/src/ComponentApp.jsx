@@ -2,35 +2,23 @@ import { useState } from "react"
 import { AddCategory } from "./AddCategory";
 import  GiftGrid  from "./GiftGrid";
 
-const defaultValue = ['Hola'] 
+import React from 'react';
+import useCounter from './useCounter';
 
-export const ComponentApp = () => {
-const [categories, setCategories] = useState (defaultValue);
+function ComponentApp() {
+  const { count, increment, decrement, reset } = useCounter();
 
-
-const addCategory = (cualquiera) =>{
-   
-    const auxCategories = [ ...categories ] 
-    auxCategories.push(cualquiera)
-    setCategories(auxCategories)
-
+  return (
+    <div>
+        <h1>Challenge counter </h1>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={reset}>Reset</button>
+    </div>
+  );
 }
 
-    return(
-        <>
-            <h1>Gifs</h1>
-            <AddCategory onAddCategory={addCategory}/>
-            <ol>
-                 {
-                    categories.map(
-                        (category, key) =>{
-                        
-                        return <GiftGrid category={category} key = {key} />
-                        }
-                    )
-                }
-            </ol>
-        </>
-    )
-}
+export default ComponentApp;
+
 
