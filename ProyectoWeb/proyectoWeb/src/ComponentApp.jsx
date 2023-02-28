@@ -1,13 +1,15 @@
 import React from 'react';
-import MultipleCustomHooks from './MultipleCustomHooks';
+
+import SecondsToTimeConverter from './SecondsToTimeConverter';
 
 function ComponentApp() {
 
     
   return (
     <div>
-      <h1>Frase Breaking Bad</h1>
-      <MultipleCustomHooks/>
+      <h2>Seconds to Time Converter</h2>
+      <p1>Punto 1</p1>
+      <SecondsToTimeConverter/>
     </div>
   );
 }

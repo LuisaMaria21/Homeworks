@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <h2>Challenge</h2>
+      <h1>Taller 1</h1>
       <ComponentApp/>
 
     </div>
