@@ -1,4 +1,5 @@
 import React from 'react';
+import NumberList from './NumberList';
 import SameNumbers from './SameNumbers';
 
 function ComponentApp() {
@@ -6,9 +7,9 @@ function ComponentApp() {
     
   return (
     <div>
-      <h3>Punto #3</h3>
-      <p>Ingrese 3 números:</p>
-      <SameNumbers/>
+      <h3>Punto #5</h3>
+      <p>Lista de los números ordenados:</p>
+      <NumberList/>
     </div>
   );
 }
