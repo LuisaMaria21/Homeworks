@@ -1,15 +1,14 @@
-import React from 'react';
-
-import SecondsToTimeConverter from './SecondsToTimeConverter';
+import useCounter from './useCounter';
 
 function ComponentApp() {
+  const { count, increment, decrement, reset } = useCounter();
 
-    
   return (
     <div>
-      <h2>Seconds to Time Converter</h2>
-      <p1>Punto 1</p1>
-      <SecondsToTimeConverter/>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={reset}>Reset</button>
     </div>
   );
 }
