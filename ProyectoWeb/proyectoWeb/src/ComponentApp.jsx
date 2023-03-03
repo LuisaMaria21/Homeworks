@@ -1,5 +1,5 @@
 import React from 'react';
-import Greeting from './Greeting';
+import SameNumbers from './SameNumbers';
 
 function ComponentApp() {
 
@@ -7,7 +7,8 @@ function ComponentApp() {
   return (
     <div>
       <h3>Punto #3</h3>
-      <Greeting/>
+      <p>Ingrese 3 números:</p>
+      <SameNumbers/>
     </div>
   );
 }
