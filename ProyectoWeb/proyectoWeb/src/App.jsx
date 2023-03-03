@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-      <h1>MultipleCustomHooks</h1>
+      <h1>Multiple Custom Hooks</h1>
       <ComponentApp/>
 
     </div>

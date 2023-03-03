@@ -7,7 +7,7 @@ const MultipleCustomHooks = () => {
     const { counter, increment } = useCounter(1);
     const url = `https://api.breakingbadquotes.xyz/v1/quotes/${counter}`;
     const { data, isLoading } = useFetch(url);
-
+    
     return (
         <>
             <h3>MultipleCustomHooks</h3>
