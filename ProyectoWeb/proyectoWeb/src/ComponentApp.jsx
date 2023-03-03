@@ -1,20 +1,37 @@
-import React from 'react';
+import { func } from "prop-types";
+import { useState } from "react"
+import { AddCategory } from "./AddCategory";
+import GiftGrid from "./GiftGrid";
 
-import SecondsToTimeConverter from './SecondsToTimeConverter';
+const defaultValue = ['Alegría']
 
 function ComponentApp() {
+  const [categories, setCategories] = useState(defaultValue);
 
-    
+
+  const addCategory = (cualquiera) => {
+
+    const auxCategories = [...categories]
+    auxCategories.push(cualquiera)
+    setCategories(auxCategories)
+
+  }
+
   return (
-    <div>
-      <h2>Seconds to Time Converter</h2>
-      <p1>Punto 1</p1>
-      <SecondsToTimeConverter/>
-    </div>
-  );
+    <>
+      <h1>Gifs</h1>
+      <AddCategory onAddCategory={addCategory} />
+      <ol>
+        {
+          categories.map(
+            (category, key) => {
+
+              return <GiftGrid category={category} key={key} />
+            }
+          )
+        }
+      </ol>
+    </>
+  )
 }
-
 export default ComponentApp;
-
-
-

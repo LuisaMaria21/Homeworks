@@ -1,5 +1,3 @@
-import './App.css'
-
 import ComponentApp from "./ComponentApp"
 
 function App() {
@@ -8,7 +6,7 @@ function App() {
 
   return (
     <div>
-      <h1>Taller 1</h1>
+      <h1>Challenge Gifs</h1>
       <ComponentApp/>
 
     </div>

@@ -2,6 +2,8 @@ import { useState } from "react"
 import { useEffect } from "react"
 import GifItem from './GifItem'
 
+
+
 const getGifs = async (category) => {
     console.log(category)
     const url = `https://api.giphy.com/v1/gifs/search?api_key=bHLmzL9XZKwPFZ8SaMiLA78jsJTJV8fI&q=${category}&limit=25&offset=0&rating=g&lang=en`
