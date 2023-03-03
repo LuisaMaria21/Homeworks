@@ -1,16 +1,13 @@
-import React from 'react';
 import useCounter from './useCounter';
 import useFetch from './useFetch';
-
 
 const MultipleCustomHooks = () => {
     const { counter, increment } = useCounter(1);
     const url = `https://api.breakingbadquotes.xyz/v1/quotes/${counter}`;
     const { data, isLoading } = useFetch(url);
-    
+
     return (
         <>
-            <h3>MultipleCustomHooks</h3>
             <hr />
             {
                 isLoading ? (
@@ -25,10 +22,11 @@ const MultipleCustomHooks = () => {
                 )
             }
 
-            <button onClick={increment}>Next quote</button>
+            <button onClick={increment}>Siguiente frase</button>
         </>
     );
 };
 
-
 export default MultipleCustomHooks;
+
+

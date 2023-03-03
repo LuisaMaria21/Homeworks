@@ -1,24 +1,15 @@
 import React from 'react';
-import useFetch from './useFetch';
+import MultipleCustomHooks from './MultipleCustomHooks';
 
-const ComponentApp = () => {
-  const url = 'https://api.breakingbadquotes.xyz/v1/quotes/1';
-  const { data, isLoading } = useFetch(url);
+function ComponentApp() {
 
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
-
-  
+    
   return (
-    <blockquote>
-      <h4>Breaking bad quotes</h4>
-      <p>{data[0].quote}</p>
-      <footer>{data[0].author}</footer>
-    </blockquote>
+    <div>
+      <h3>Frase Breaking Bad</h3>
+      <MultipleCustomHooks/>
+    </div>
   );
-};
-
-
+}
 
 export default ComponentApp;
