@@ -1,14 +1,13 @@
 import React from 'react';
-import MultipleCustomHooks from './MultipleCustomHooks';
-import SecondsToTimeConverter from './SecondsToTimeConverter';
+import Greeting from './Greeting';
 
 function ComponentApp() {
 
     
   return (
     <div>
-      <h3>Punto #1</h3>
-      <SecondsToTimeConverter/>
+      <h3>Punto #3</h3>
+      <Greeting/>
     </div>
   );
 }
