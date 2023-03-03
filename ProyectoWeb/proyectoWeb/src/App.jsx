@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <h1>Taller 1</h1>
+      <h1>Challenge añadir categoria</h1>
       <ComponentApp/>
 
     </div>
