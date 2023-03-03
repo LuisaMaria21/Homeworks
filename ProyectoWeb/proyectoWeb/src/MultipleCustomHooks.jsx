@@ -2,6 +2,7 @@ import React from 'react';
 import useCounter from './useCounter';
 import useFetch from './useFetch';
 
+
 const MultipleCustomHooks = () => {
     const { counter, increment } = useCounter(1);
     const url = `https://api.breakingbadquotes.xyz/v1/quotes/${counter}`;
@@ -28,5 +29,6 @@ const MultipleCustomHooks = () => {
         </>
     );
 };
+
 
 export default MultipleCustomHooks;

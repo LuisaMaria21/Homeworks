@@ -1,18 +1,23 @@
 import React from 'react';
+import useFetch from './useFetch';
 
-import SecondsToTimeConverter from './SecondsToTimeConverter';
+const ComponentApp = () => {
+  const url = 'https://api.breakingbadquotes.xyz/v1/quotes/1';
+  const { data, isLoading } = useFetch(url);
 
-function ComponentApp() {
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  
   return (
-    <div>
-      <h2>Seconds to Time Converter</h2>
-      <p1>Punto 1</p1>
-      <SecondsToTimeConverter/>
-    </div>
+    <blockquote>
+      <p>{data[0].quote}</p>
+      <footer>{data[0].author}</footer>
+    </blockquote>
   );
-}
+};
+
+
 
 export default ComponentApp;
-
-
-
