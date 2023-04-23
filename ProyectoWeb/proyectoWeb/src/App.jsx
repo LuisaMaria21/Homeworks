@@ -1,19 +1,23 @@
 import './App.css'
-
-import ComponentApp from "./ComponentApp"
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, incrementBy, selectCount } from "./features/counter/counterSlice";
 
 function App() {
-
-
+  const dispatch = useDispatch();
+  const count = useSelector(selectCount);
 
   return (
     <div>
-      <h1>Taller 1</h1>
-      <ComponentApp/>
-
+      <div>
+        <button onClick={() => dispatch(decrement())}>-</button>
+        <span>{count}</span>
+        <button onClick={() => dispatch(incrementBy(5))}>+</button>
+      </div>
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;
+
+
