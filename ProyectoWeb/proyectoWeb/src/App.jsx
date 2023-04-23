@@ -1,17 +1,14 @@
 import './App.css'
-
-import ComponentApp from "./ComponentApp"
+import React from 'react';
+import TodoApp from './components/TodoApp';
 
 function App() {
-
   return (
-    <div>
-      <h1>Multiple Custom Hooks</h1>
-      <ComponentApp/>
-
+    <div className="container">
+      <TodoApp />
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;
+
