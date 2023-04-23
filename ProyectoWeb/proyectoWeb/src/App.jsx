@@ -1,47 +1,23 @@
 import './App.css'
-import { useState } from 'react';
-import TodoForm from './TodoForm';
-import TodoList from './TodoList';
-import { useTodo } from './useTodo';
+import React from 'react';
+import { Link, Navigate, NavLink, Route, Routes } from 'react-router-dom';
+import NavComponent from './NavComponent';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
 
-function App() {
-  const [newTodo, setNewTodo] = useState('');
-  const { todos, addTodo, deleteTodo, toggleTodo, countTodos, countPendingTodos } = useTodo();
-
-  const handleNewTodo = (event) => {
-    setNewTodo(event.target.value);
-  };
-
-  const handleAddTodo = (event) => {
-    event.preventDefault();
-    if (newTodo !== '') {
-      addTodo({
-        id: Date.now(),
-        text: newTodo,
-        completed: false,
-      });
-      setNewTodo('');
-    }
-  };
-
+const App = () => {
   return (
-    <div className="container my-5">
-      <h1 className="text-center mb-4">TODO List</h1>
-      <div className="row">
-        <div className="col-md-6">
-          <TodoForm newTodo={newTodo} handleNewTodo={handleNewTodo} handleAddTodo={handleAddTodo} />
-        </div>
-        <div className="col-md-6">
-          <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
-          <div className="text-center mt-3">
-            <p>Total todos: {countTodos}</p>
-            <p>Pending todos: {countPendingTodos}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Router>
+      <NavComponent />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
 
